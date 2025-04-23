@@ -6,8 +6,8 @@ import { faList } from "@fortawesome/free-solid-svg-icons";
 
 const Profile = () => {
     const [jobs, setJobs] = useState([]);
-    const jobapi = "http://localhost:5001/api/v1/job";
-    const userapi = "http://localhost:5001/api/v1/user";
+    const jobapi = "https://job-portal-back-production.up.railway.app/api/v1/job";
+    const userapi = "https://job-portal-back-production.up.railway.app/api/v1/user";
     const [resume, setResume] = useState(null);
 
     const navigate = useNavigate();

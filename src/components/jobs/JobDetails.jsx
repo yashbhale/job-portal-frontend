@@ -4,7 +4,7 @@ import { useSearchParams } from "react-router-dom";
 
 const JobDetails = () => {
   const [searchParams] = useSearchParams();
-  const jobapi = "http://localhost:5001/api/v1/job";
+  const jobapi = "https://job-portal-back-production.up.railway.app/api/v1/job";
   const [job, setJob] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

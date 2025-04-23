@@ -10,8 +10,8 @@ const Loginc = () => {
     password:'',
   });
   const navigate=useNavigate();
-  const userapi="http://localhost:5001/api/v1/user"
-  const compapi="http://localhost:5001/api/v1/company"
+  const userapi="https://job-portal-back-production.up.railway.app/api/v1/user"
+  const compapi="https://job-portal-back-production.up.railway.app/api/v1/company"
 
   const handleChange=(e)=> {
     setformdata({...formdata,[e.target.name]:e.target.value})

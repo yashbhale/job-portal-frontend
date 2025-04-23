@@ -4,7 +4,7 @@ import { Link,useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar';
 
 const Postjob = () => {
-  const jobapi="http://localhost:5001/api/v1/job";
+  const jobapi="https://job-portal-back-production.up.railway.app/api/v1/job";
   const [form,setForm]=useState({
     title:'',
     description:'',

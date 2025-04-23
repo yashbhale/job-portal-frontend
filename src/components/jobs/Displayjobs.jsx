@@ -6,7 +6,7 @@ import { FiBookmark, FiClock, FiMapPin, FiDollarSign, FiBriefcase } from 'react-
 const Displayjobs = () => {
     const [jobs, setJobs] = useState([]);
     const [loading, setLoading] = useState(true);
-    const jobapi = "http://localhost:5001/api/v1/job";
+    const jobapi = "https://job-portal-back-production.up.railway.app/api/v1/job";
     const navigate = useNavigate();
     const location = useLocation();
 

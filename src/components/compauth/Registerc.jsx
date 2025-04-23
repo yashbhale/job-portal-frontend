@@ -11,9 +11,9 @@ const Registerc = () => {
     password:'',
   });
 
-  const compapi="http://localhost:5001/api/v1/company"
+  const compapi="https://job-portal-back-production.up.railway.app/api/v1/company"
 
-  const userapi="http://localhost:5001/api/v1/user"
+  const userapi="https://job-portal-back-production.up.railway.app/api/v1/user"
 
   const navigate=useNavigate();
 
