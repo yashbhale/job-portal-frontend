@@ -23,13 +23,17 @@ const Loginc = () => {
         email:formdata.name,
         password:formdata.password,
     }
-    const res = await fetch(`${compapi}/login`,{
-        method:'POST',
-        headers: {
-            'Content-Type':'application/json',
-        },
-        body:JSON.stringify(form),
-    })
+    
+
+    const res = await fetch(`${compapi}/jobs`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      credentials: 'include', // keep this
+    });
+    
+    
     const data=await res.json();
     console.log(data," xxx",data.token,"mmmmmmmmmmm");
     console.log("hi");
