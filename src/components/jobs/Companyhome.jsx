@@ -23,10 +23,10 @@ const Companyhome = () => {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            "Authorization": `Bearer ${token}`, // ✅ send token
           },
-          credentials: 'include',
+          credentials: 'include', // keep this
         });
+        
     
         const data = await res.json();
         console.log("mmmmmmmmmm", data);
