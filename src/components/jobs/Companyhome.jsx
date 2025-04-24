@@ -16,24 +16,30 @@ const Companyhome = () => {
     }
 
     useEffect(() => {
-      const fetchjobs=async()=>{
-        const res=await fetch(`${compapi}/jobs`,{
-          method:"GET",
+      const fetchjobs = async () => {
+        const token = localStorage.getItem("token"); // or sessionStorage, based on your login logic
+    
+        const res = await fetch(`${compapi}/jobs`, {
+          method: "GET",
           headers: {
             "Content-Type": "application/json",
-              },
-              credentials: 'include',
-          })
-          const data=await res.json();
-          console.log("mmmmmmmmmm",data);
-          setJobs(data.jobs);
-
-        }
-
-        fetchjobs();
-
+            "Authorization": `Bearer ${token}`, // ✅ send token
+          },
+          credentials: 'include',
+        });
     
-    },[])
+        const data = await res.json();
+        console.log("mmmmmmmmmm", data);
+        if (data.success) {
+          setJobs(data.jobs);
+        } else {
+          setJobs([]); // fallback to empty list
+        }
+      };
+    
+      fetchjobs();
+    }, []);
+    
     
 
 
