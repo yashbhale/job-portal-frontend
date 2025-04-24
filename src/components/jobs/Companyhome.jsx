@@ -9,7 +9,7 @@ const Companyhome = () => {
     
     const [filter,setFilter]="";
     const [jobs,setJobs]=useState([]);
-    const compapi="http://localhost:5001/api/v1/company"
+    const compapi="https://main.da70a11bmr0pz.amplifyapp.com/api/v1/company"
 
     const handlechange=(e)=>{
         setFilter(e.target.value);
