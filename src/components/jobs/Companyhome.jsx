@@ -9,7 +9,7 @@ const Companyhome = () => {
     
     const [filter,setFilter]="";
     const [jobs,setJobs]=useState([]);
-    const compapi="https://main.da70a11bmr0pz.amplifyapp.com/api/v1/company"
+    const compapi="https://job-portal-back-production.up.railway.app/api/v1/company"
 
     const handlechange=(e)=>{
         setFilter(e.target.value);
